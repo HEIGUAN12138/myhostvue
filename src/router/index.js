@@ -150,6 +150,45 @@ export const constantRoutes = [
   },
 
   {
+    path: '/profile',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Profile',
+        component: () => import('@/views/profile/Profile'),
+        meta: { title: 'Profile', icon: 'user' }
+      }
+    ]
+  },
+
+  {
+    path: '/settings',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Settings',
+        component: () => import('@/views/settings/Settings'),
+        meta: { title: 'Settings', icon: 'setting' }
+      }
+    ]
+  },
+
+  {
+    path: '/help',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Help',
+        component: () => import('@/views/help/Help'),
+        meta: { title: 'Help', icon: 'question-circle' }
+      }
+    ]
+  },
+
+  {
     path: 'external-link',
     component: Layout,
     children: [
